@@ -9,6 +9,17 @@
   src: url('assets/fonts/Teyvat-Regular.otf') format('opentype');
 }
 
+@font-face {
+  font-family: "Fontaine Script";
+  src: url('assets/fonts/FontaineScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Sumeru";
+  src: url('assets/fonts/Sumeru-Regular.ttf') format('truetype');
+}
+
+
 .inter-font {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -19,5 +30,15 @@
 
 .teyvat-font {
   font-family: "Teyvat", sans-serif;
+  font-weight: 400;
+}
+
+.fontaine-font {
+  font-family: "Fontaine Script", sans-serif;
+  font-weight: 400;
+}
+
+.sumeru-font {
+  font-family: "Sumeru", sans-serif;
   font-weight: 400;
 }

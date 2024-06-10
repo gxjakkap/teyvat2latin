@@ -4,8 +4,11 @@ import Page from "../components/page"
 import { QWERTY, ALPHABET } from "../lib/keyboard"
 import useWindowDimensions from "../hooks/dim"
 
+type GenshinScript = 'teyvat' | 'sumeru' | 'fontaine'
+
 export default function IndexPage () {
     const [text, setText] = useState("")
+    const [currentScript, setCurrentScript] = useState<GenshinScript>('teyvat')
 
     const { width } = useWindowDimensions()
 
@@ -35,12 +38,12 @@ export default function IndexPage () {
         setText(text + command)
     }
 
-    const generateTeyvatKeyboard = () => {
+    const generateKeyboard = () => {
         const keyboardRows = QWERTY.map((row) => {
             const keys = row.map((letter) => {
                 return createElement("button", 
                     { 
-                        className: "flex flex-grow h-12 border-solid border-2 justify-center items-center rounded-md text-slate-50 text-2xl px-2 teyvat-font",
+                        className: `flex flex-grow h-12 border-solid border-2 justify-center items-center rounded-md text-slate-50 text-2xl px-2 ${currentScript}-font`,
                         onClick: (() => keyboardComm((letter === "⬅") ? "del" : letter))
                     }, 
                     letter
@@ -65,13 +68,19 @@ export default function IndexPage () {
         return (
             <Page color={"bg-[#2d325a]"}>
                 <div className="flex flex-col pt-5 px-14 gap-y-2">
+                    <select className="bg-[#404780] h-12 border-solid border-2 text-slate-50 text-xl text-center inter-font rounded-lg block w-full px-2" value={currentScript} onChange={(e) => {setCurrentScript(e.target.value as GenshinScript)}}>
+                        <option value="teyvat" selected>Teyvat Script (Mondstadt/Common)</option>
+                        <option value="fontaine">Fontaine Script</option>
+                        <option value="sumeru">Sumeru Script</option>
+                    </select>
+
                     <p className="text-lg text-slate-50">Teyvat</p>
-                    <textarea className="text-3xl text-slate-50 teyvat-font bg-[#404780] rounded-xl" value={text}></textarea>
+                    <textarea className={`text-3xl text-slate-50 ${currentScript}-font bg-[#404780] rounded-xl px-2 py-1`} value={text}></textarea>
     
                     <p className="text-lg text-slate-50">Latin</p>
-                    <textarea className="text-3xl text-slate-50 inter-font bg-[#404780] rounded-xl" value={text} onChange={(e) => {setText(e.target.value)}}></textarea>
+                    <textarea className="text-3xl text-slate-50 inter-font bg-[#404780] rounded-xl px-2 py-1" value={text} onChange={(e) => {setText(e.target.value)}}></textarea>
     
-                    {generateTeyvatKeyboard()}
+                    {generateKeyboard()}
     
                     <div className="flex w-full flex-col justify-center gap-y-4">
                         <button className="flex flex-grow h-12 border-solid border-2 justify-center items-center rounded-md text-slate-50 text-xl inter-font px-2" onClick={() => keyboardComm("space")}>Space</button>

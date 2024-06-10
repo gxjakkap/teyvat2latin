@@ -12,6 +12,18 @@ export default function CreditsPage () {
                         <p>Source: <a className="underline hover:text-sky-400 focus:text-violet-500" href="https://redd.it/ltnf92" target="_blank" rel="noopener,noreferer">"Made A Mondstad/Teyvat (??) Alphabet Font, drive link in comments" on r/Genshin_Impact</a></p>
                         <p>Download: <a className="underline hover:text-sky-400 focus:text-violet-500" href="https://drive.google.com/file/d/1kIon2atuCbr_Xrm92th9V8eoqx5uld6E/view" target="_blank" rel="noopener,noreferer">Google Drive</a></p>
                     </div>
+                    <div className="text-lg text-slate-50">
+                        <h2 className="text-3xl text-slate-50 mb-3">FontaineScript Regular Font</h2>
+                        <p>Made by <a className="underline hover:text-sky-400 focus:text-violet-500" href="https://www.reddit.com/user/To_Bun/" target="_blank" rel="noopener,noreferer">u/To_Bun</a> on Reddit</p>
+                        <p>Source: <a className="underline hover:text-sky-400 focus:text-violet-500" href="https://redd.it/1739kqe" target="_blank" rel="noopener,noreferer">"Fontaine Script Font" on r/Genshin_Impact</a></p>
+                        <p>Download: <a className="underline hover:text-sky-400 focus:text-violet-500" href="https://drive.google.com/file/d/1KHn1vp8hbcGoe2QkM7NTa6cqyuFde3jJ/view" target="_blank" rel="noopener,noreferer">Google Drive</a></p>
+                    </div>
+                    <div className="text-lg text-slate-50">
+                        <h2 className="text-3xl text-slate-50 mb-3">Sumeru Regular Font</h2>
+                        <p>Made by <a className="underline hover:text-sky-400 focus:text-violet-500" href="https://twitter.com/puepeupeu" target="_blank" rel="noopener,noreferer">@puepeupeu</a> on Twitter</p>
+                        <p>Source: <a className="underline hover:text-sky-400 focus:text-violet-500" href="https://twitter.com/puepeupeu/status/1599089752153927680" target="_blank" rel="noopener,noreferer">Original Tweet</a></p>
+                        <p>Download: <a className="underline hover:text-sky-400 focus:text-violet-500" href="https://drive.google.com/drive/folders/1zX_2pqRvjGy9-rBhXzjOj84QE6N9TLSP" target="_blank" rel="noopener,noreferer">Google Drive</a></p>
+                    </div>
                 </div>
             </div>
             <div className="w-full text-center pb-5">
